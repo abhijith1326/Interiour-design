@@ -44,12 +44,13 @@ export default function Hero({ onExplore }) {
     const targetImg = cache[clampedIndex - 1];
 
     const dpr = window.devicePixelRatio || 1;
-    const displayWidth = window.innerWidth;
-    const displayHeight = window.innerHeight;
+    const parent = canvas.parentElement;
+    const displayWidth = parent ? parent.clientWidth : window.innerWidth;
+    const displayHeight = parent ? parent.clientHeight : window.innerHeight;
 
-    if (canvas.width !== displayWidth * dpr || canvas.height !== displayHeight * dpr) {
-      canvas.width = displayWidth * dpr;
-      canvas.height = displayHeight * dpr;
+    if (canvas.width !== Math.round(displayWidth * dpr) || canvas.height !== Math.round(displayHeight * dpr)) {
+      canvas.width = Math.round(displayWidth * dpr);
+      canvas.height = Math.round(displayHeight * dpr);
     }
 
     const canvasW = canvas.width;
