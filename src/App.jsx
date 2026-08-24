@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -16,12 +17,26 @@ import AboutModal from './components/AboutModal';
 import './index.css';
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
   const [quoteTitle, setQuoteTitle] = useState("Request a Quote");
   const [activeLightboxItem, setActiveLightboxItem] = useState(null);
   const [lightboxItems, setLightboxItems] = useState([]);
   const [activeArticle, setActiveArticle] = useState(null);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+
+  // Lock body scrolling while initial preloader is active
+  useEffect(() => {
+    if (isLoading) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isLoading]);
 
   const handleOpenQuote = (title = "Request a Quote") => {
     setQuoteTitle(title);
@@ -35,6 +50,11 @@ export default function App() {
 
   return (
     <div className="app-main">
+      {/* 15-Second Initial Luxury Preloader */}
+      {isLoading && (
+        <Preloader onFinish={() => setIsLoading(false)} />
+      )}
+
       {/* Top Header Navigation */}
       <Navbar onOpenQuote={() => handleOpenQuote("Get a Custom Quote")} />
 
@@ -96,3 +116,4 @@ export default function App() {
     </div>
   );
 }
+
