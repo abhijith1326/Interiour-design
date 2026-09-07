@@ -54,7 +54,7 @@ export default function App() {
 
   return (
     <div className="app-main">
-      {/* 15-Second Initial Luxury Preloader */}
+      {/* 7-Second Initial Luxury Preloader */}
       {isLoading && (
         <Preloader onFinish={() => setIsLoading(false)} />
       )}

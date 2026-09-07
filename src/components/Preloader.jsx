@@ -14,7 +14,7 @@ export default function Preloader({ onFinish }) {
   const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
-    const duration = 2200; // 2.2 seconds loading duration
+    const duration = 7000; // 7 seconds loading duration
     const intervalTime = 25;
     const increment = (intervalTime / duration) * 100;
 
