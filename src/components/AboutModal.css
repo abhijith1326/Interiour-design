@@ -82,10 +82,32 @@
 }
 
 .about-story-col p {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   line-height: 1.7;
   color: var(--color-text-muted-dark);
   margin-bottom: 14px;
+}
+
+.about-lead-para {
+  font-weight: 500;
+  color: var(--color-heading-dark) !important;
+}
+
+.about-closing-box {
+  margin-top: 20px;
+  padding: 16px 20px;
+  background: rgba(198, 156, 82, 0.08);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 6px 6px 0;
+}
+
+.closing-statement-text {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-gold-dark);
+  margin-bottom: 0 !important;
+  font-style: italic;
 }
 
 .about-highlights-col {

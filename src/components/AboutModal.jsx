@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Award, Users, ShieldCheck, ArrowRight } from 'lucide-react';
+import { X, Award, Users, ShieldCheck, ArrowRight, Sparkles } from 'lucide-react';
 import './AboutModal.css';
 
 export default function AboutModal({ isOpen, onClose, onOpenQuote }) {
@@ -14,56 +14,66 @@ export default function AboutModal({ isOpen, onClose, onOpenQuote }) {
 
         <div className="about-modal-header">
           <div className="section-tag">
-            <span>INTRIA ARCHITECTURAL STUDIO</span>
+            <Sparkles size={14} className="gold-sparkle-icon" />
+            <span>ABOUT SPACE DESIGN</span>
           </div>
-          <h2 className="about-modal-title">Crafting Timeless Interiors Since 2012</h2>
-          <p className="about-modal-subtitle">
-            Where structural precision meets refined aesthetics to transform everyday spaces into extraordinary sanctuaries.
-          </p>
+          <h2 className="about-modal-title">We Design Spaces That Feel Like Home</h2>
         </div>
 
         <div className="about-modal-body">
           <div className="about-modal-grid">
             <div className="about-story-col">
-              <h3>Our Philosophy</h3>
-              <p>
-                At INTRIA, interior design is not merely decoration—it is an intricate dialogue between architecture, natural illumination, and human experience. Founded in 2012 by master architects, our studio specializes in bespoke residential estates, luxury dining environments, and high-impact corporate headquarters.
+              <p className="about-lead-para">
+                Space Design is an interior design and execution studio focused on creating meaningful, functional and beautiful spaces.
               </p>
               <p>
-                Every project begins with a deep listening process. We study how light moves through your rooms, how your family or company interacts, and what materials evoke emotion.
+                We work closely with our clients to understand how they live, what they value and how they want their space to feel. This understanding becomes the foundation for every design we create.
               </p>
+              <p>
+                From concept development and space planning to material selection, execution and final installation, we bring together creativity and craftsmanship to deliver interiors that are made to last.
+              </p>
+              <p>
+                For us, interior design isn't simply about following trends. It's about creating spaces that remain relevant, comfortable and uniquely yours.
+              </p>
+
+              {/* Closing Statement Callout */}
+              <div className="about-closing-box">
+                <p className="closing-statement-text">
+                  "Your space tells your story. We help you design it."
+                </p>
+              </div>
             </div>
 
             <div className="about-highlights-col">
               <div className="highlight-card">
                 <Users className="highlight-icon" size={24} />
                 <div>
-                  <h4>Master Craftsmanship</h4>
-                  <p>In-house artisans, woodworkers, and lighting specialists.</p>
+                  <h4>Client-Centered Vision</h4>
+                  <p>Designing around how you live, what you value and your daily rhythm.</p>
                 </div>
               </div>
 
               <div className="highlight-card">
                 <ShieldCheck className="highlight-icon" size={24} />
                 <div>
-                  <h4>Sustainable Materials</h4>
-                  <p>Eco-conscious hardwoods, natural stone, and non-toxic finishes.</p>
+                  <h4>Craftsmanship & Quality</h4>
+                  <p>Bringing together creativity and durable materials engineered to last.</p>
                 </div>
               </div>
 
               <div className="highlight-card">
                 <Award className="highlight-icon" size={24} />
                 <div>
-                  <h4>Turnkey Execution</h4>
-                  <p>From initial 3D design to white-glove furniture installation.</p>
+                  <h4>End-to-End Execution</h4>
+                  <p>From 3D spatial planning to white-glove site delivery and setup.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="about-modal-footer">
-            <button className="btn-gold-filled" onClick={() => { onClose(); onOpenQuote("Book an Initial Design Consultation"); }}>
-              <span>BOOK A CONSULTATION</span>
+            <button className="btn-gold-filled" onClick={() => { onClose(); onOpenQuote("Let's Talk About Your Space"); }}>
+              <span>LET'S TALK ABOUT YOUR SPACE</span>
               <ArrowRight size={16} />
             </button>
           </div>

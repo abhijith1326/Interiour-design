@@ -18,12 +18,59 @@
   flex-direction: column;
 }
 
+.about-paragraphs-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
 .about-paragraph {
   font-size: 0.95rem;
   line-height: 1.75;
   color: var(--color-text-muted-dark);
-  margin-bottom: 40px;
-  max-width: 540px;
+  margin-bottom: 0;
+  max-width: 580px;
+}
+
+.about-highlight-box {
+  background: linear-gradient(135deg, rgba(198, 156, 82, 0.1), rgba(198, 156, 82, 0.03));
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 8px 8px 0;
+  padding: 16px 20px;
+  margin-bottom: 32px;
+}
+
+.highlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.highlight-phrases {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+
+.highlight-phrase {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.highlight-phrase:not(:last-child)::after {
+  content: "•";
+  margin-left: 16px;
+  color: var(--color-gold);
 }
 
 .about-features-grid {

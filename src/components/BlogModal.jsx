@@ -23,7 +23,7 @@ export default function BlogModal({ article, onClose }) {
           <div className="blog-modal-meta">
             <span className="meta-item"><Calendar size={14} /> {article.date}</span>
             <span className="meta-item"><Clock size={14} /> {article.readTime}</span>
-            <span className="meta-item"><User size={14} /> By Intria Design Team</span>
+            <span className="meta-item"><User size={14} /> By Space Design Team</span>
           </div>
 
           <div className="blog-modal-text">

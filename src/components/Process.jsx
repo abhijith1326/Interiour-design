@@ -8,50 +8,53 @@ export default function Process() {
   const steps = [
     {
       num: '01',
-      title: 'CONSULTATION',
-      desc: 'We listen to your ideas, space requirements, budget and aesthetic vision during an in-depth creative session.',
-      icon: <Search size={20} />,
-      detail: 'Our senior designers assess architectural blueprints, lighting orientation, and functional lifestyle needs to establish project milestones.'
+      stage: 'DISCOVER',
+      title: 'Tell Us Your Vision',
+      desc: 'We understand your requirements, lifestyle, preferences and budget.',
+      icon: <Search size={20} />
     },
     {
       num: '02',
-      title: 'CONCEPT',
-      desc: 'Our design team creates bespoke mood boards, material palettes and spatial schemes.',
-      icon: <Lightbulb size={20} />,
-      detail: 'We formulate color schemes, fabric textures, marble samples, and custom lighting arrangements tailored to your style.'
+      stage: 'DESIGN',
+      title: 'Shape the Concept',
+      desc: 'Our designers develop layouts, concepts, materials and visualisations for your space.',
+      icon: <Lightbulb size={20} />
     },
     {
       num: '03',
-      title: 'DESIGN',
-      desc: 'Detailed 3D photorealistic visualizations, floor plans, and technical specs.',
-      icon: <Compass size={20} />,
-      detail: 'Experience your space in 3D before construction begins, allowing precise adjustments to millwork, lighting, and layout.'
+      stage: 'REFINE',
+      title: 'Perfect Every Detail',
+      desc: 'Review the design, choose finishes and refine the details until everything feels right.',
+      icon: <Compass size={20} />
     },
     {
       num: '04',
-      title: 'EXECUTION',
-      desc: 'We bring the design to life with master craftsmen and site supervision.',
-      icon: <Wrench size={20} />,
-      detail: 'Our project managers handle procurement, custom fabrication, quality controls, and site execution seamlessly.'
+      stage: 'EXECUTE',
+      title: 'Bring It to Life',
+      desc: 'Our execution team manages manufacturing, installation and on-site coordination.',
+      icon: <Wrench size={20} />
     },
     {
       num: '05',
-      title: 'DELIVERY',
-      desc: 'On-time delivery, white-glove installation with perfect finishing touches.',
-      icon: <CheckCircle size={20} />,
-      detail: 'Final walkthrough, white-glove furniture staging, decor placement, and full client satisfaction handover.'
+      stage: 'DELIVER',
+      title: 'Step Into Your New Space',
+      desc: 'After final quality checks, your completed space is ready for you to experience.',
+      icon: <CheckCircle size={20} />
     }
   ];
 
   return (
-    <section className="process-section">
+    <section id="process" className="process-section">
       <div className="process-container">
         {/* Header */}
         <div className="process-header">
           <div className="section-tag">
-            <span>OUR PROCESS</span>
+            <span>DESIGN PROCESS</span>
           </div>
-          <h2 className="section-title-light">From Concept to Creation</h2>
+          <h2 className="section-title-light">From Vision to Reality</h2>
+          <p className="process-subheading">
+            A simple, transparent process designed to make your interior journey effortless.
+          </p>
         </div>
 
         {/* 5-Step Timeline Cards */}
@@ -72,20 +75,12 @@ export default function Process() {
                   </div>
                 </div>
 
-                <span className="process-step-num">{step.num}</span>
+                <div className="step-num-pill">{step.num}</div>
+                <span className="process-stage-badge">{step.stage}</span>
                 <h3 className="process-step-title">{step.title}</h3>
                 <p className="process-step-desc">{step.desc}</p>
               </div>
             ))}
-          </div>
-
-          {/* Active Step Detail Preview Card */}
-          <div className="step-detail-card">
-            <div className="step-detail-header">
-              <span className="step-detail-tag">STAGE {steps[activeStep].num} DETAILS</span>
-              <h4 className="step-detail-title">{steps[activeStep].title} PHASE</h4>
-            </div>
-            <p className="step-detail-text">{steps[activeStep].detail}</p>
           </div>
         </div>
       </div>

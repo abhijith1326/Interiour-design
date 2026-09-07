@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowRight, Sparkles, Layers } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import './Hero.css';
 
 const DESKTOP_FRAMES = 143;
@@ -262,54 +262,27 @@ export default function Hero({ onExplore }) {
           <div key={activeStage} className="hero-content animated-content-swap">
             <div className="hero-tag-badge">
               <Sparkles size={14} className="gold-sparkle-icon" />
-              <span className="hero-tag-text">{currentContent.tag}</span>
+              <span className="hero-tag-text">Premium Interior Design & Turnkey Solutions</span>
             </div>
 
-            <h1 className="hero-title">{currentContent.title}</h1>
+            <h1 className="hero-title">
+              Spaces That Inspire.<br />
+              <span className="hero-title-accent">Interiors That Belong to You.</span>
+            </h1>
             
-            <p className="hero-description">{currentContent.desc}</p>
+            <p className="hero-description">
+              We transform houses into thoughtfully designed homes where style, comfort and functionality come together. From concept to completion, Space Design creates interiors that reflect the way you live.
+            </p>
 
             <div className="hero-cta-wrap">
-              <a href="#projects" className="btn-gold-filled" onClick={onExplore}>
-                <span>EXPLORE PROJECTS</span>
+              <button className="btn-gold-filled" onClick={onExplore}>
+                <span>GET STARTED</span>
                 <ArrowRight size={16} />
-              </a>
-
-              <button 
-                className="btn-stage-jump"
-                onClick={() => scrollToStage((activeStage + 1) % stagesContent.length)}
-              >
-                <Layers size={15} />
-                <span>NEXT STAGE ({currentContent.stageNum}/04)</span>
               </button>
-            </div>
-          </div>
-
-          {/* Bottom Scroll Progress Bar & Stage Indicators */}
-          <div className="hero-scroll-dashboard">
-            <div className="scroll-indicator-wrap">
-              <span className="scroll-hint-text">SCROLL TO TRANSFORM ROOM</span>
-              <div className="scroll-progress-bar-track">
-                <div 
-                  className="scroll-progress-bar-fill"
-                  style={{ width: `${(displayedFrame / totalFrames) * 100}%` }}
-                ></div>
-              </div>
-              <span className="scroll-frame-count">FRAME {displayedFrame} / {totalFrames}</span>
-            </div>
-
-            {/* Stage Quick Navigation Buttons */}
-            <div className="stage-nav-pills">
-              {stagesContent.map((st, idx) => (
-                <button
-                  key={idx}
-                  className={`stage-pill-btn ${activeStage === idx ? 'active' : ''}`}
-                  onClick={() => scrollToStage(idx)}
-                >
-                  <span className="pill-num">{st.stageNum}</span>
-                  <span className="pill-label">{st.title}</span>
-                </button>
-              ))}
+              
+              <a href="#projects" className="btn-outline-glass">
+                <span>EXPLORE OUR WORK</span>
+              </a>
             </div>
           </div>
 

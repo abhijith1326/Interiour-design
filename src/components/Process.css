@@ -15,6 +15,15 @@
   margin-bottom: 70px;
 }
 
+.process-subheading {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text-muted-dark);
+  max-width: 600px;
+  margin: 12px auto 0 auto;
+  font-weight: 300;
+}
+
 .process-timeline {
   position: relative;
 }
@@ -43,27 +52,37 @@
   align-items: center;
   text-align: center;
   cursor: pointer;
-  padding: 10px;
+  padding: 16px 10px;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  background: #ffffff;
+  border: 1px solid var(--color-light-border);
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.process-step-item:hover,
+.process-step-item.active {
+  border-color: var(--color-gold);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(198, 156, 82, 0.15);
 }
 
 .node-circle-outer {
-  width: 70px;
-  height: 70px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   background: #0d0e11;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .process-step-item:hover .node-circle-outer,
 .process-step-item.active .node-circle-outer {
-  transform: translateY(-5px) scale(1.05);
+  transform: scale(1.05);
   background: var(--color-gold);
 }
 
@@ -79,29 +98,39 @@
   color: #0d0e11;
 }
 
-.process-step-num {
-  font-size: 0.72rem;
+.step-num-pill {
+  font-size: 0.68rem;
   font-weight: 700;
   color: var(--color-gold);
+  background: rgba(198, 156, 82, 0.1);
+  border: 1px solid rgba(198, 156, 82, 0.3);
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.process-stage-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--color-text-dark);
+  text-transform: uppercase;
   margin-bottom: 6px;
-  letter-spacing: 0.1em;
 }
 
 .process-step-title {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
   color: var(--color-text-dark);
-  text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  line-height: 1.25;
 }
 
 .process-step-desc {
   font-size: 0.8rem;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--color-text-muted-dark);
-  max-width: 200px;
 }
 
 .step-detail-card {

@@ -53,14 +53,12 @@ export default function Navbar({ onOpenQuote }) {
       <div className="navbar-container">
         {/* Brand Logo */}
         <a href="#home" className="navbar-logo">
-          <div className="logo-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />
-            </svg>
+          <div className="logo-icon-wrapper">
+            <img src="/logo.png" alt="Space Design Logo" className="brand-logo-img" />
           </div>
           <div className="logo-text">
-            <span className="brand-name">INTRIA</span>
-            <span className="brand-sub">INTERIOR DESIGN</span>
+            <span className="brand-name">Space Design</span>
+            <span className="brand-sub">SPACES THAT INSPIRE</span>
           </div>
         </a>
 

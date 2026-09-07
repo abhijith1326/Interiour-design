@@ -4,10 +4,14 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
+import WhyUs from './components/WhyUs';
 import Projects from './components/Projects';
+import DesignStyles from './components/DesignStyles';
+import StatsSection from './components/StatsSection';
 import Process from './components/Process';
 import Testimonials from './components/Testimonials';
 import Blog from './components/Blog';
+import SeoSection from './components/SeoSection';
 import CtaBanner from './components/CtaBanner';
 import Footer from './components/Footer';
 import QuoteModal from './components/QuoteModal';
@@ -69,13 +73,19 @@ export default function App() {
           onViewAllServices={() => handleOpenQuote("Custom Service Consultation")}
         />
         
+        <WhyUs />
+
+        <Process />
+
         <Projects 
           onOpenLightbox={handleOpenLightbox}
           onViewAllProjects={() => handleOpenQuote("Discuss Your Project Vision")}
         />
         
-        <Process />
-        
+        <DesignStyles onOpenQuote={handleOpenQuote} />
+
+        <StatsSection />
+
         <Testimonials />
         
         <Blog 
@@ -83,11 +93,16 @@ export default function App() {
           onViewAllBlogs={() => handleOpenQuote("Design Advisory Consultation")}
         />
         
-        <CtaBanner onSchedule={() => handleOpenQuote("Schedule a Consultation")} />
+        <SeoSection />
+
+        <CtaBanner 
+          onStartProject={() => handleOpenQuote("Let's Talk About Your Space")}
+          onSchedule={(title) => handleOpenQuote(title || "Book a Consultation")} 
+        />
       </main>
 
       {/* Footer */}
-      <Footer />
+      <Footer onOpenQuote={handleOpenQuote} />
 
       {/* Interactive Modals */}
       <QuoteModal 
@@ -101,6 +116,7 @@ export default function App() {
         items={lightboxItems}
         onClose={() => setActiveLightboxItem(null)}
         onNavigate={(item) => setActiveLightboxItem(item)}
+        onOpenQuote={handleOpenQuote}
       />
 
       <BlogModal

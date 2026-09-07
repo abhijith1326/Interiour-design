@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Compass, ShieldCheck, UserCheck, ArrowRight, Award } from 'lucide-react';
+import { Compass, ShieldCheck, UserCheck, ArrowRight, Award, Sparkles } from 'lucide-react';
 import './About.css';
 
 export default function About({ onOpenAboutModal }) {
@@ -8,18 +8,18 @@ export default function About({ onOpenAboutModal }) {
   const features = [
     {
       icon: <Compass size={22} />,
-      title: 'Creative Design',
-      desc: 'Innovative ideas and spatial concepts that bring custom spaces to life.'
+      title: 'Thoughtful Design',
+      desc: 'Spatial concepts designed around your personality, lifestyle and habits.'
     },
     {
       icon: <ShieldCheck size={22} />,
-      title: 'Quality Assured',
-      desc: 'Premium sustainable materials and meticulous craftsmanship guaranteed.'
+      title: 'Quality Materials',
+      desc: 'Handpicked sustainable materials engineered for elegance and longevity.'
     },
     {
       icon: <UserCheck size={22} />,
-      title: 'Client Focused',
-      desc: 'Your distinct vision, lifestyle habits, and taste guide every step.'
+      title: 'Precise Execution',
+      desc: 'Managing every detail from concept to white-glove final installation.'
     }
   ];
 
@@ -36,16 +36,39 @@ export default function About({ onOpenAboutModal }) {
         {/* Left Side Content */}
         <div className="about-content">
           <div className="section-tag">
-            <span>ABOUT US</span>
+            <span>ABOUT SPACE DESIGN</span>
           </div>
 
           <h2 className="section-title-light">
-            Designing Spaces<br />That Tell Your Story
+            Designing Spaces With Purpose
           </h2>
 
-          <p className="about-paragraph">
-            At Intria Interior Design, we believe every space has the potential to inspire. Our passion lies in creating interiors that are not only beautiful but also functional, sustainable and uniquely tailored to your individual rhythm.
-          </p>
+          <div className="about-paragraphs-wrap">
+            <p className="about-paragraph">
+              At SPACE DESIGN, we believe great interiors are more than beautiful spaces. They are an expression of your personality, lifestyle and aspirations.
+            </p>
+
+            <p className="about-paragraph">
+              Our approach combines thoughtful design, quality materials and precise execution to create spaces that are both visually stunning and practical for everyday living.
+            </p>
+
+            <p className="about-paragraph">
+              Whether you're creating a new home, renovating an existing space or designing a commercial environment, our team takes care of every detail from the first idea to the final finish.
+            </p>
+          </div>
+
+          {/* Highlight Text Card */}
+          <div className="about-highlight-box">
+            <div className="highlight-badge">
+              <Sparkles size={14} className="gold-sparkle-icon" />
+              <span>PHILOSOPHY</span>
+            </div>
+            <div className="highlight-phrases">
+              <span className="highlight-phrase">Design with intention.</span>
+              <span className="highlight-phrase">Create with precision.</span>
+              <span className="highlight-phrase">Live beautifully.</span>
+            </div>
+          </div>
 
           {/* 3 Columns Features with React active state */}
           <div className="about-features-grid">
@@ -75,9 +98,9 @@ export default function About({ onOpenAboutModal }) {
           </div>
 
           <div className="about-cta-wrap">
-            <button className="btn-outline-dark" onClick={onOpenAboutModal}>
-              <span>READ MORE ABOUT US</span>
-              <ArrowRight size={15} />
+            <button className="btn-gold-filled" onClick={onOpenAboutModal}>
+              <span>LEARN MORE ABOUT US</span>
+              <ArrowRight size={16} />
             </button>
           </div>
         </div>
@@ -86,7 +109,7 @@ export default function About({ onOpenAboutModal }) {
         <div className="about-image-wrapper">
           <img 
             src="/images/about_img.png" 
-            alt="Intria Interior Showcase - Modern Luxury Living and Dining Room" 
+            alt="Space Design Showcase - Modern Luxury Living and Dining Room" 
             className="about-img"
           />
           <div className="about-image-border"></div>
@@ -94,7 +117,7 @@ export default function About({ onOpenAboutModal }) {
           <div className="experience-floating-badge">
             <Award size={24} className="gold-award-icon" />
             <div>
-              <span className="badge-title">Award-Winning Studio</span>
+              <span className="badge-title">SPACE DESIGN Studio</span>
               <span className="badge-sub">Excellence in Interior Architecture</span>
             </div>
           </div>

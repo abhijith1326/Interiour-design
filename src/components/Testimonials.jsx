@@ -8,34 +8,20 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      quote: "Intria transformed our house into a dream home. Their attention to detail, architectural taste, and material selection is exceptional!",
-      name: "Ananya K.",
-      role: "Homeowner, Villa 42",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      quote: "Space Design understood exactly what we wanted and transformed our home into something we never imagined. The design is beautiful, practical and completely us.",
+      role: "Residential Client",
       rating: 5
     },
     {
       id: 2,
-      quote: "A professional team that thoroughly understands complex commercial requirements and delivers beyond expectations on time.",
-      name: "Rajeev M.",
-      role: "CEO, TechPark Innovations",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      quote: "The attention to detail was excellent. From the initial design to the final installation, the entire process was handled professionally.",
+      role: "Homeowner",
       rating: 5
     },
     {
       id: 3,
-      quote: "They designed our executive office space beautifully, boosting productivity and receiving compliments from every visiting client.",
-      name: "Neha R.",
-      role: "Creative Director",
-      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
-      rating: 5
-    },
-    {
-      id: 4,
-      quote: "From initial moodboards to final lighting execution, working with Intria was an absolute joy. Highly recommended!",
-      name: "Vikram Sethi",
-      role: "Penthouse Owner",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      quote: "We wanted a modern interior without losing the warmth of our home. Space Design delivered exactly that.",
+      role: "3 BHK Homeowner",
       rating: 5
     }
   ];
@@ -65,6 +51,9 @@ export default function Testimonials() {
               <span>TESTIMONIALS</span>
             </div>
             <h2 className="section-title-dark">What Our Clients Say</h2>
+            <p className="testimonials-subheading">
+              Real experiences from people who trusted Space Design with their spaces.
+            </p>
           </div>
 
           <div className="testimonial-arrow-controls">
@@ -78,26 +67,22 @@ export default function Testimonials() {
         </div>
 
         {/* Dynamic Cards View */}
-        <div className="testimonials-grid">
+        <div className="testimonials-grid-3">
           {testimonials.map((item, idx) => (
             <div 
               key={item.id} 
-              className={`testimonial-card ${activeDot === idx ? 'featured' : ''}`}
+              className={`testimonial-card-lux ${activeDot === idx ? 'featured' : ''}`}
               onClick={() => setActiveDot(idx)}
             >
               <div className="quote-mark">
-                <Quote size={32} />
+                <Quote size={28} />
               </div>
 
-              <p className="testimonial-text">{item.quote}</p>
+              <p className="testimonial-text">"{item.quote}"</p>
 
               <div className="testimonial-author-row">
                 <div className="author-info">
-                  <img src={item.avatar} alt={item.name} className="author-avatar" />
-                  <div className="author-details">
-                    <h4 className="author-name">{item.name}</h4>
-                    <span className="author-role">{item.role}</span>
-                  </div>
+                  <span className="author-role-title">— {item.role}</span>
                 </div>
 
                 <div className="stars-row">

@@ -1,12 +1,12 @@
 /* ==========================================================================
-   INTRIA Interior Design - Luxury 15-Second Preloader Screen
+   SPACE DESIGN - Premium Intro Loading Screen
    ========================================================================== */
 
 .preloader-overlay {
   position: fixed;
   inset: 0;
   z-index: 999999;
-  background-color: #08090b;
+  background-color: #060709;
   color: #f5f4f0;
   display: flex;
   align-items: center;
@@ -19,49 +19,49 @@
 
 .preloader-exiting {
   opacity: 0;
-  transform: scale(1.04);
+  transform: scale(1.05);
   pointer-events: none;
 }
 
-/* Background Grid Lines & Ambient Lighting */
+/* Background Ambient Lighting & Architectural Grid */
 .preloader-bg-grid {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.35;
+  opacity: 0.4;
   overflow: hidden;
 }
 
 .grid-line {
   position: absolute;
-  background: linear-gradient(90deg, transparent, rgba(198, 156, 82, 0.15), transparent);
+  background: linear-gradient(90deg, transparent, rgba(198, 156, 82, 0.18), transparent);
 }
 
 .line-v-1 {
-  left: 20%;
+  left: 18%;
   top: 0;
   bottom: 0;
   width: 1px;
-  background: linear-gradient(180deg, transparent, rgba(198, 156, 82, 0.15), transparent);
+  background: linear-gradient(180deg, transparent, rgba(198, 156, 82, 0.18), transparent);
 }
 
 .line-v-2 {
-  right: 20%;
+  right: 18%;
   top: 0;
   bottom: 0;
   width: 1px;
-  background: linear-gradient(180deg, transparent, rgba(198, 156, 82, 0.15), transparent);
+  background: linear-gradient(180deg, transparent, rgba(198, 156, 82, 0.18), transparent);
 }
 
 .line-h-1 {
-  top: 30%;
+  top: 25%;
   left: 0;
   right: 0;
   height: 1px;
 }
 
 .line-h-2 {
-  bottom: 30%;
+  bottom: 25%;
   left: 0;
   right: 0;
   height: 1px;
@@ -72,243 +72,166 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(198, 156, 82, 0.12) 0%, rgba(8, 9, 11, 0) 70%);
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(198, 156, 82, 0.15) 0%, rgba(6, 7, 9, 0) 70%);
   border-radius: 50%;
-  animation: pulseGlow 6s ease-in-out infinite alternate;
+  animation: pulseGlow 5s ease-in-out infinite alternate;
 }
 
 @keyframes pulseGlow {
-  0% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.6; }
+  0% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.5; }
   100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
 }
 
-/* Center Content Stack */
-.preloader-content {
+/* Centered Clean Glassmorphism Box */
+.preloader-clean-box {
   position: relative;
   z-index: 2;
   width: 90%;
-  max-width: 520px;
+  max-width: 480px;
+  padding: 44px 36px;
+  background: rgba(14, 16, 20, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(198, 156, 82, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 30px rgba(198, 156, 82, 0.12);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 40px 24px;
 }
 
-/* Brand Section */
-.preloader-brand {
+/* Brand Header */
+.preloader-brand-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 48px;
+  gap: 16px;
+  margin-bottom: 36px;
 }
 
-.brand-logo-ring {
-  position: relative;
-  width: 72px;
-  height: 72px;
+.preloader-logo-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid rgba(198, 156, 82, 0.45);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(198, 156, 82, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
 }
 
-.ring-pulse {
-  position: absolute;
-  inset: -6px;
-  border-radius: 50%;
-  border: 1px solid rgba(198, 156, 82, 0.3);
-  animation: ringPulse 2.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+.preloader-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@keyframes ringPulse {
-  0% { transform: scale(0.9); opacity: 0.8; }
-  50% { transform: scale(1.1); opacity: 0.3; }
-  100% { transform: scale(0.9); opacity: 0.8; }
-}
-
-.logo-icon-wrap {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, rgba(26, 28, 34, 0.9), rgba(19, 20, 24, 0.95));
-  border: 1px solid rgba(198, 156, 82, 0.4);
-  border-radius: 50%;
+.preloader-brand-title-wrap {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: var(--color-gold, #c69c52);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(198, 156, 82, 0.2);
 }
 
-.preloader-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 2.5rem;
-  font-weight: 600;
+.preloader-brand-name {
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-size: 2.2rem;
+  font-weight: 700;
   letter-spacing: 0.22em;
   color: #ffffff;
-  margin-bottom: 6px;
-  background: linear-gradient(135deg, #ffffff 40%, var(--color-gold, #c69c52) 100%);
+  margin: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ffffff 0%, #e2d2ba 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.preloader-subtitle {
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.7rem;
+.preloader-brand-sub {
+  font-size: 0.68rem;
+  letter-spacing: 0.35em;
+  color: var(--color-gold, #c69c52);
+  margin-top: 6px;
   font-weight: 600;
-  letter-spacing: 0.3em;
-  color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
 }
 
-/* Progress Section */
-.preloader-progress-section {
+/* Progress Wrap */
+.preloader-loading-wrap {
   width: 100%;
-  margin-bottom: 36px;
-}
-
-.preloader-stats {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 12px;
-  padding: 0 4px;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.preloader-counter {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 2rem;
-  font-weight: 500;
-  color: var(--color-gold, #c69c52);
-  letter-spacing: 0.05em;
-  line-height: 1;
-}
-
-.preloader-timer {
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.6);
-  letter-spacing: 0.08em;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.timer-icon {
-  color: var(--color-gold, #c69c52);
-  animation: rotateCompass 15s linear infinite;
-}
-
-@keyframes rotateCompass {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Progress Bar Track */
-.preloader-track {
+.preloader-track-bar {
   width: 100%;
   height: 4px;
   background: rgba(255, 255, 255, 0.08);
-  border-radius: 2px;
+  border-radius: 4px;
   overflow: hidden;
   position: relative;
-  margin-bottom: 18px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-.preloader-fill {
+.preloader-fill-bar {
   height: 100%;
-  background: linear-gradient(90deg, #ab8339 0%, #c69c52 50%, #f3d898 100%);
-  border-radius: 2px;
-  position: relative;
+  background: linear-gradient(90deg, #ab8339 0%, #c69c52 50%, #f7e4b6 100%);
+  border-radius: 4px;
   transition: width 0.1s linear;
-  box-shadow: 0 0 12px rgba(198, 156, 82, 0.6);
+  box-shadow: 0 0 12px rgba(198, 156, 82, 0.7);
 }
 
-.fill-glow {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 30px;
-  background: linear-gradient(90deg, transparent, #ffffff, transparent);
-  opacity: 0.8;
-  animation: shimmerSweep 1.5s infinite;
-}
-
-@keyframes shimmerSweep {
-  0% { opacity: 0.3; }
-  50% { opacity: 1; }
-  100% { opacity: 0.3; }
-}
-
-/* Status Text Fade Transition */
-.preloader-status-wrapper {
-  height: 24px;
+.preloader-status-row {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  margin-top: 4px;
 }
 
-.preloader-status-text {
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.82rem;
+.preloader-status-msg {
+  font-family: var(--font-body, 'Outfit', sans-serif);
+  font-size: 0.8rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 0.05em;
-  animation: textFadeIn 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.04em;
+  animation: fadeInStatus 0.4s ease;
 }
 
-@keyframes textFadeIn {
-  from { opacity: 0; transform: translateY(6px); }
+@keyframes fadeInStatus {
+  from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Skip Intro Button */
-.preloader-skip-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 22px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(198, 156, 82, 0.3);
-  border-radius: 30px;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.72rem;
+.preloader-percent {
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-size: 1.25rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
-  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-  cursor: pointer;
+  color: var(--color-gold, #c69c52);
+  letter-spacing: 0.05em;
 }
 
-.preloader-skip-btn:hover {
-  background: rgba(198, 156, 82, 0.15);
-  border-color: var(--color-gold, #c69c52);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(198, 156, 82, 0.25);
-}
-
-.preloader-skip-btn svg {
-  transition: transform 0.3s ease;
-}
-
-.preloader-skip-btn:hover svg {
-  transform: translateX(4px);
-}
-
-/* Mobile Adjustments */
-@media (max-width: 480px) {
-  .preloader-title {
-    font-size: 2rem;
+@media (max-width: 576px) {
+  .preloader-clean-box {
+    padding: 32px 24px;
+    width: 88%;
   }
-  .preloader-counter {
-    font-size: 1.6rem;
+
+  .preloader-brand-name {
+    font-size: 1.75rem;
+    letter-spacing: 0.18em;
   }
-  .preloader-status-text {
-    font-size: 0.75rem;
+
+  .preloader-brand-sub {
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+  }
+
+  .preloader-status-msg {
+    font-size: 0.74rem;
   }
 }
