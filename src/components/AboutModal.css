@@ -55,7 +55,7 @@
   font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 600;
-  color: var(--color-heading-dark);
+  color: var(--color-text-dark);
   margin-top: 6px;
   margin-bottom: 10px;
 }
@@ -78,7 +78,7 @@
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 14px;
-  color: var(--color-heading-dark);
+  color: var(--color-text-dark);
 }
 
 .about-story-col p {
@@ -90,7 +90,7 @@
 
 .about-lead-para {
   font-weight: 500;
-  color: var(--color-heading-dark) !important;
+  color: var(--color-text-dark) !important;
 }
 
 .about-closing-box {
@@ -135,7 +135,7 @@
 .highlight-card h4 {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--color-heading-dark);
+  color: var(--color-text-dark);
   margin-bottom: 4px;
 }
 
@@ -153,11 +153,36 @@
 }
 
 @media (max-width: 768px) {
+  .about-modal-backdrop {
+    padding: 16px;
+  }
   .about-modal-content {
-    padding: 24px;
+    padding: 24px 20px;
   }
   .about-modal-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-modal-backdrop {
+    padding: 12px;
+  }
+  .about-modal-content {
+    padding: 20px 16px;
+    max-height: 92vh;
+  }
+  .about-modal-close {
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+  }
+  .about-modal-title {
+    font-size: 1.5rem;
+  }
+  .about-modal-footer {
+    padding-top: 18px;
   }
 }

@@ -172,7 +172,20 @@
   .services-section {
     padding: 50px 16px;
   }
+  .services-header {
+    margin-bottom: 36px;
+  }
   .service-card-lux {
     padding: 20px 16px;
+  }
+  .card-title-lux {
+    font-size: 1.3rem;
+  }
+  .service-img-frame {
+    height: 180px;
+  }
+  .service-card-desc {
+    min-height: auto;
+    margin-bottom: 14px;
   }
 }

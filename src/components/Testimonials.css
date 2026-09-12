@@ -135,7 +135,7 @@
 }
 
 @media (max-width: 1200px) {
-  .testimonials-grid {
+  .testimonials-grid-3 {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
@@ -150,17 +150,24 @@
     align-items: flex-start;
     gap: 16px;
   }
-  .testimonials-grid {
+  .testimonials-grid-3 {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  .testimonial-card {
-    padding: 22px 18px;
+  .testimonial-card-lux {
+    padding: 24px 20px;
   }
 }
 
 @media (max-width: 480px) {
   .testimonials-section {
     padding: 50px 16px;
+  }
+  .testimonial-card-lux {
+    padding: 20px 16px;
+  }
+  .testimonial-text {
+    font-size: 0.86rem;
+    margin-bottom: 20px;
   }
 }

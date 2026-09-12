@@ -38,6 +38,17 @@ export default function Navbar({ onOpenQuote }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
+
   const handleNavClick = (e, href) => {
     e.preventDefault();
     setMobileOpen(false);

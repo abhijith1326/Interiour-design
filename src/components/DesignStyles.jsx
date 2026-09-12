@@ -47,7 +47,7 @@ export default function DesignStyles({ onOpenQuote }) {
             <Sparkles size={14} className="gold-sparkle-icon" />
             <span>INTERIOR STYLES</span>
           </div>
-          <h2 className="section-title-dark">Find Your Interior Style</h2>
+          <h2 className="section-title-light">Find Your Interior Style</h2>
           <p className="design-styles-subheading">
             Discover design aesthetics tailored to reflect your lifestyle, character, and sanctuary.
           </p>

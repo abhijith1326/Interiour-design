@@ -257,14 +257,22 @@
 
 @media (max-width: 480px) {
   .footer-section {
-    padding: 50px 16px 20px 16px;
+    padding: 44px 16px 20px 16px;
   }
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 28px;
+    margin-bottom: 40px;
+  }
+  .footer-col-title {
+    margin-bottom: 16px;
   }
   .bottom-links {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 8px 12px;
+  }
+  .copyright-text {
+    text-align: center;
   }
 }

@@ -236,4 +236,15 @@
   .blog-image-wrapper {
     height: 180px;
   }
+  .blog-card-body {
+    padding: 18px 16px;
+  }
+  .blog-card-title {
+    font-size: 1.12rem;
+    margin-bottom: 12px;
+  }
+  .category-pill {
+    padding: 6px 12px;
+    font-size: 0.68rem;
+  }
 }

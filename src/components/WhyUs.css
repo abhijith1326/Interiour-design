@@ -130,7 +130,7 @@
     padding: 60px 20px;
   }
   .why-us-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
   .why-us-card {
@@ -141,5 +141,15 @@
 @media (max-width: 480px) {
   .why-us-section {
     padding: 50px 16px;
+  }
+  .why-us-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .why-us-card {
+    padding: 20px 16px;
+  }
+  .why-us-card-title {
+    font-size: 1.18rem;
   }
 }

@@ -137,17 +137,22 @@
 
 @media (max-width: 600px) {
   .modal-backdrop {
-    padding: 16px;
+    padding: 12px;
   }
   .modal-content {
     padding: 24px 18px;
-    max-height: 90vh;
+    max-height: 92vh;
     overflow-y: auto;
+  }
+  .modal-close-btn {
+    top: 14px;
+    right: 14px;
   }
   .modal-title {
     font-size: 1.5rem;
   }
   .form-row {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 }

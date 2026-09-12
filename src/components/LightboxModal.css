@@ -308,17 +308,49 @@
 
 @media (max-width: 600px) {
   .lightbox-backdrop {
-    padding: 16px;
+    padding: 12px;
   }
   .lightbox-modal-card {
-    padding: 20px 16px;
+    padding: 20px 14px;
+    max-height: 94vh;
+    border-radius: 8px;
+  }
+  .lightbox-close {
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+  }
+  .lightbox-main-img-wrap {
+    height: 230px;
+  }
+  .project-detail-title {
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+  }
+  .project-meta-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 12px;
+    gap: 10px;
   }
   .project-cta-banner {
     flex-direction: column;
     align-items: flex-start;
+    padding: 16px;
+    gap: 12px;
   }
   .project-cta-banner button {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-meta-grid {
+    grid-template-columns: 1fr;
+  }
+  .thumb-item {
+    width: 56px;
+    height: 42px;
   }
 }
