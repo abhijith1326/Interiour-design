@@ -328,40 +328,45 @@
 
 @media (max-width: 768px) {
   .hero-scrollytelling-section {
-    height: 500vh;
+    position: relative;
+    height: 400vh;
+    background-color: #0b0c0e;
   }
 
   .hero-sticky-wrapper {
     position: sticky;
     top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
     height: 100dvh;
-    width: 100vw;
+    height: 100lvh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
   }
 
   /* Full screen canvas layer - ZERO black space */
   .hero-bg-layer {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    height: 100dvh;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     background: #0b0c0e;
     overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   .hero-canvas {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    height: 100dvh;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     display: block;
     object-fit: cover;
   }
@@ -385,6 +390,7 @@
     width: 100%;
     height: 100vh;
     height: 100dvh;
+    height: 100lvh;
     margin-top: 0;
     padding: 70px 16px 16px 16px;
     display: flex;

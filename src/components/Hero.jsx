@@ -44,9 +44,8 @@ export default function Hero({ onExplore }) {
     const targetImg = cache[clampedIndex - 1];
 
     const dpr = window.devicePixelRatio || 1;
-    const parent = canvas.parentElement;
-    const displayWidth = parent ? parent.clientWidth : window.innerWidth;
-    const displayHeight = parent ? parent.clientHeight : window.innerHeight;
+    const displayWidth = window.innerWidth;
+    const displayHeight = Math.max(window.innerHeight, document.documentElement ? document.documentElement.clientHeight : 0);
 
     if (canvas.width !== Math.round(displayWidth * dpr) || canvas.height !== Math.round(displayHeight * dpr)) {
       canvas.width = Math.round(displayWidth * dpr);
