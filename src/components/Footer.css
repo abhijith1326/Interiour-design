@@ -242,13 +242,16 @@
   .footer-section {
     padding: 60px 20px 20px 20px;
   }
+
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
   }
+
   .footer-bio {
     max-width: 100%;
   }
+
   .footer-bottom-bar {
     justify-content: center;
     text-align: center;
@@ -257,22 +260,16 @@
 
 @media (max-width: 480px) {
   .footer-section {
-    padding: 44px 16px 20px 16px;
+    padding: 50px 16px 20px 16px;
   }
+
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
-    margin-bottom: 40px;
+    gap: 24px;
   }
-  .footer-col-title {
-    margin-bottom: 16px;
-  }
+
   .bottom-links {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px 12px;
-  }
-  .copyright-text {
-    text-align: center;
   }
 }

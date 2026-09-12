@@ -147,19 +147,19 @@
 
 .about-feature-card {
   background: #ffffff;
-  border: 1px solid #eae7e0;
+  border: 1px solid rgba(18, 19, 22, 0.08);
   border-radius: 12px;
   padding: 22px 18px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-feature-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
-  border-color: #ebd9b8;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-color: rgba(168, 125, 50, 0.3);
 }
 
 .feature-circle-icon {
@@ -202,7 +202,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   align-items: center;
-  border: 1px solid #e8decb;
+  border: 1px solid rgba(171, 131, 57, 0.2);
   margin-top: 10px;
 }
 
@@ -264,12 +264,12 @@
 .dark-badge {
   position: absolute;
   background: #14161a;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 2px solid var(--color-gold);
   border-radius: 12px;
   padding: 22px 26px;
   color: #ffffff;
   z-index: 10;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45), 0 0 20px rgba(198, 156, 82, 0.2);
 }
 
 .badge-top-left {

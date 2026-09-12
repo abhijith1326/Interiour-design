@@ -1,19 +1,8 @@
-import React, { useState } from 'react';
-import { ArrowRight, Filter } from 'lucide-react';
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import './Projects.css';
 
 export default function Projects({ onOpenLightbox, onViewAllProjects }) {
-  const [activeCategory, setActiveCategory] = useState('ALL');
-
-  const categories = [
-    'ALL',
-    'RESIDENTIAL',
-    'KITCHENS',
-    'BEDROOMS',
-    'LIVING',
-    'COMMERCIAL'
-  ];
-
   const projectsList = [
     {
       id: 1,
@@ -65,9 +54,7 @@ export default function Projects({ onOpenLightbox, onViewAllProjects }) {
     }
   ];
 
-  const filteredProjects = activeCategory === 'ALL'
-    ? projectsList
-    : projectsList.filter(p => p.category === activeCategory);
+  const filteredProjects = projectsList;
 
   return (
     <section id="projects" className="projects-section">
@@ -81,21 +68,6 @@ export default function Projects({ onOpenLightbox, onViewAllProjects }) {
           <p className="projects-subheading">
             Explore a selection of interiors designed around individuality, functionality and timeless aesthetics.
           </p>
-
-          {/* Categories Filter Tabs */}
-          <div className="projects-filter-bar">
-            <div className="filter-pills">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  className={`filter-pill ${activeCategory === cat ? 'active' : ''}`}
-                  onClick={() => setActiveCategory(cat)}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Projects Cards Grid */}

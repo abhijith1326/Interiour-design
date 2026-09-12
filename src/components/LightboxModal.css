@@ -14,7 +14,7 @@
 
 .lightbox-modal-card {
   background: var(--color-dark-surface);
-  border: 1px solid rgba(198, 156, 82, 0.3);
+  border: 2px solid var(--color-gold);
   border-radius: 12px;
   max-width: 1180px;
   width: 100%;

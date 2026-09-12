@@ -75,7 +75,7 @@
   background: #ffffff;
   border: 1px solid var(--color-light-border);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  box-shadow: var(--shadow-soft);
   position: relative;
 }
 
@@ -83,11 +83,11 @@
 .process-step-item.active {
   border-color: var(--color-gold);
   transform: translateY(-8px);
-  box-shadow: 0 18px 38px rgba(198, 156, 82, 0.2);
+  box-shadow: 0 14px 30px rgba(198, 156, 82, 0.2);
 }
 
 .process-step-item.past:not(.active) {
-  border-color: rgba(198, 156, 82, 0.4);
+  border-color: rgba(198, 156, 82, 0.3);
 }
 
 /* Circle Nodes */
@@ -148,10 +148,10 @@
 /* Step Badge Pills & Text */
 .step-num-pill {
   font-size: 0.68rem;
-  font-weight: 700;
-  color: var(--color-gold-dark-text);
-  background: rgba(198, 156, 82, 0.1);
-  border: 1px solid rgba(198, 156, 82, 0.3);
+  font-weight: 800;
+  color: #121316;
+  background: rgba(198, 156, 82, 0.18);
+  border: 1px solid rgba(198, 156, 82, 0.4);
   padding: 2px 10px;
   border-radius: 12px;
   margin-bottom: 8px;
@@ -192,7 +192,7 @@
 .process-detail-card {
   margin-top: 44px;
   background: #ffffff;
-  border: 1px solid #ebd9b8;
+  border: 1px solid var(--color-light-border);
   border-left: 4px solid var(--color-gold);
   border-radius: 12px;
   padding: 26px 36px;
@@ -200,7 +200,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  box-shadow: 0 12px 30px rgba(198, 156, 82, 0.08);
+  box-shadow: var(--shadow-soft);
   animation: detailSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
@@ -221,10 +221,10 @@
 }
 
 .detail-step-badge {
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.72rem;
+  font-weight: 800;
   letter-spacing: 0.18em;
-  color: var(--color-gold-dark-text);
+  color: #121316;
   text-transform: uppercase;
   margin-bottom: 6px;
 }
@@ -258,7 +258,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-gold-dark-text);
+  color: var(--color-gold);
   box-shadow: 0 0 20px rgba(198, 156, 82, 0.2);
 }
 

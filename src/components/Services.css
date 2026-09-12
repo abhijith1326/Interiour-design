@@ -32,8 +32,8 @@
 
 .service-card-lux {
   background: var(--color-dark-surface);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
+  border: 2px solid var(--color-gold);
+  border-radius: 8px;
   padding: 28px 24px 24px 24px;
   display: flex;
   flex-direction: column;
@@ -42,13 +42,14 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 8px 25px rgba(198, 156, 82, 0.15);
 }
 
 .service-card-lux:hover,
 .service-card-lux.active {
-  border-color: var(--color-gold);
+  border-color: var(--color-gold-light);
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 40px rgba(198, 156, 82, 0.35);
 }
 
 .card-header-badge {

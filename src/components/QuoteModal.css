@@ -18,7 +18,7 @@
 
 .modal-content {
   background: #121419;
-  border: 1px solid rgba(198, 156, 82, 0.3);
+  border: 2px solid var(--color-gold);
   border-radius: 8px;
   width: 100%;
   max-width: 580px;

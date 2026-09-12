@@ -42,14 +42,14 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  box-shadow: var(--shadow-soft);
 }
 
 .why-us-card:hover,
 .why-us-card.active {
   border-color: var(--color-gold);
   transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(198, 156, 82, 0.15);
+  box-shadow: 0 14px 30px rgba(198, 156, 82, 0.2);
 }
 
 .why-us-card-top {

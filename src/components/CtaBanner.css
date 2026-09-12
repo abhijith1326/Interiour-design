@@ -11,7 +11,7 @@
 
 .cta-box-lux {
   background: linear-gradient(135deg, rgba(26, 28, 34, 0.95), rgba(13, 14, 17, 0.98));
-  border: 1px solid rgba(198, 156, 82, 0.35);
+  border: 2px solid var(--color-gold);
   border-radius: 12px;
   padding: 60px 64px;
   display: flex;

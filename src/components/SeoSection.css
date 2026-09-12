@@ -11,8 +11,7 @@
 
 .seo-card {
   background: var(--color-dark-surface);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-left: 3px solid var(--color-gold);
+  border: 2px solid var(--color-gold);
   border-radius: 8px;
   padding: 40px 48px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);

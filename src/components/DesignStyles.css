@@ -33,21 +33,21 @@
 .style-card {
   background: #ffffff;
   border: 1px solid var(--color-light-border);
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: var(--transition-smooth);
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow-soft);
 }
 
 .style-card:hover,
 .style-card.active {
   border-color: var(--color-gold);
   transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(198, 156, 82, 0.15);
+  box-shadow: 0 14px 30px rgba(198, 156, 82, 0.2);
 }
 
 .style-img-wrapper {
