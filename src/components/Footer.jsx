@@ -1,20 +1,8 @@
-import React, { useState } from 'react';
-import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
+import React from 'react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 import './Footer.css';
 
 export default function Footer({ onOpenQuote }) {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail('');
-      setTimeout(() => setSubscribed(false), 4000);
-    }
-  };
-
   return (
     <footer id="contact" className="footer-section">
       <div className="footer-container">
@@ -117,25 +105,6 @@ export default function Footer({ onOpenQuote }) {
                 </div>
               </li>
             </ul>
-
-            {/* Newsletter */}
-            <div className="newsletter-wrap">
-              <h5 className="newsletter-title">Stay Inspired</h5>
-              <form onSubmit={handleSubscribe} className="newsletter-form">
-                <input
-                  type="email"
-                  placeholder="Enter email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="newsletter-input"
-                />
-                <button type="submit" className="newsletter-submit-btn" aria-label="Subscribe">
-                  <ArrowRight size={15} />
-                </button>
-              </form>
-              {subscribed && <p className="newsletter-success">Subscribed!</p>}
-            </div>
           </div>
         </div>
 
