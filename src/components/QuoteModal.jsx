@@ -72,7 +72,7 @@ export default function QuoteModal({ isOpen, onClose, title = "Let's Talk About 
                   <input 
                     type="tel" 
                     required 
-                    placeholder="+91 XXXXX XXXXX"
+                    placeholder="+91 81298 22666"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   />
@@ -82,7 +82,7 @@ export default function QuoteModal({ isOpen, onClose, title = "Let's Talk About 
                   <input 
                     type="email" 
                     required 
-                    placeholder="info@spacedesign.com"
+                    placeholder="spacedesign2666@gmail.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   />
@@ -112,7 +112,7 @@ export default function QuoteModal({ isOpen, onClose, title = "Let's Talk About 
                   <input 
                     type="text" 
                     required
-                    placeholder="e.g. Trivandrum, Kerala"
+                    placeholder="e.g. Kazhakuttam, Trivandrum"
                     value={formData.location}
                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                   />
@@ -144,6 +144,21 @@ export default function QuoteModal({ isOpen, onClose, title = "Let's Talk About 
                 <Send size={15} />
               </button>
             </form>
+
+            <div className="modal-direct-contact">
+              <span className="direct-contact-title">Or reach out to us directly:</span>
+              <div className="direct-contact-pills">
+                <a href="tel:+918129822666" className="direct-pill">
+                  📞 Primary: +91 81298 22666
+                </a>
+                <a href="tel:+918848286562" className="direct-pill">
+                  📞 Secondary: +91 88482 86562
+                </a>
+                <a href="mailto:spacedesign2666@gmail.com" className="direct-pill">
+                  ✉️ spacedesign2666@gmail.com
+                </a>
+              </div>
+            </div>
           </>
         )}
       </div>

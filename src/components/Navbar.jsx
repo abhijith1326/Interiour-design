@@ -63,13 +63,9 @@ export default function Navbar({ onOpenQuote }) {
     <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-container">
         {/* Brand Logo */}
-        <a href="#home" className="navbar-logo">
+        <a href="#home" className="navbar-logo" aria-label="Space Design Home">
           <div className="logo-icon-wrapper">
             <img src="/logo.png" alt="Space Design Logo" className="brand-logo-img" />
-          </div>
-          <div className="logo-text">
-            <span className="brand-name">Space Design</span>
-            <span className="brand-sub">SPACES THAT INSPIRE</span>
           </div>
         </a>
 

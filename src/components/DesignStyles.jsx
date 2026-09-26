@@ -9,31 +9,31 @@ export default function DesignStyles({ onOpenQuote }) {
     {
       title: 'Modern',
       desc: 'Clean lines, balanced forms and contemporary finishes.',
-      img: '/images/project_1.png',
+      img: '/images/style_1.jpeg',
       tag: 'MODERN AESTHETIC'
     },
     {
       title: 'Minimal',
       desc: 'Simple, refined spaces where every element has a purpose.',
-      img: '/images/service_custom.png',
+      img: '/images/style_2.jpeg',
       tag: 'MINIMALIST LUXURY'
     },
     {
       title: 'Contemporary',
       desc: 'A sophisticated combination of comfort, functionality and modern aesthetics.',
-      img: '/images/project_4.png',
+      img: '/images/style_3.jpeg',
       tag: 'URBAN CONTEMPORARY'
     },
     {
       title: 'Luxury',
       desc: 'Rich materials, refined detailing and an elevated sense of elegance.',
-      img: '/images/project_2.png',
+      img: '/images/style_4.jpeg',
       tag: 'OPULENT RESIDENCE'
     },
     {
       title: 'Modern Indian',
       desc: 'Contemporary design inspired by Indian warmth, textures and traditions.',
-      img: '/images/project_3.png',
+      img: '/images/style_5.jpeg',
       tag: 'HERITAGE REFINED'
     }
   ];

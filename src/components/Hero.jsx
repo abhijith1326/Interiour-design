@@ -154,12 +154,11 @@ export default function Hero({ onExplore }) {
         setDisplayedFrame(frameInt);
         lastRenderedInt = frameInt;
 
-        // Stage calculation
+        // Stage calculation across 3 scroll stages
         const ratio = frameInt / maxF;
-        if (ratio < 0.25) setActiveStage(0);
-        else if (ratio < 0.50) setActiveStage(1);
-        else if (ratio < 0.75) setActiveStage(2);
-        else setActiveStage(3);
+        if (ratio < 0.35) setActiveStage(0);
+        else if (ratio < 0.70) setActiveStage(1);
+        else setActiveStage(2);
       }
 
       rafIdRef.current = requestAnimationFrame(renderLoop);
@@ -200,47 +199,32 @@ export default function Hero({ onExplore }) {
 
   const stagesContent = [
     {
-      stageNum: '01',
-      tag: 'STAGE 01 • RAW ARCHITECTURAL CANVAS',
-      title: 'THE EMPTY CANVAS',
-      desc: 'Every luxury interior begins with an untouched architectural space full of potential.',
+      badge: 'Premium Interior Design & Turnkey Solutions',
+      title: 'Spaces That Inspire.',
+      accent: 'Interiors That Belong to You.',
+      desc: 'We transform houses into thoughtfully designed homes where style, comfort and functionality come together. From concept to completion, Space Design creates interiors that reflect the way you live.',
+      btnText: 'GET STARTED',
+      secondaryBtnText: 'EXPLORE OUR WORK'
     },
     {
-      stageNum: '02',
-      tag: 'STAGE 02 • STRUCTURE & MILLWORK',
-      title: 'BESPOKE CRAFTSMANSHIP',
-      desc: 'Installing custom marble accent walls, architectural shelving, and warm hardwood flooring.',
+      badge: 'Crafted For Modern Living',
+      title: 'Where Style Meets Function',
+      accent: '',
+      desc: 'Modern design, quality materials, and timeless elegance.',
+      btnText: 'GET STARTED',
+      secondaryBtnText: 'EXPLORE OUR WORK'
     },
     {
-      stageNum: '03',
-      tag: 'STAGE 03 • FURNISHING & LIGHTING',
-      title: 'CURATED ELEGANCE',
-      desc: 'Integrating plush sectional seating, statement coffee tables, and layered ambient lighting.',
-    },
-    {
-      stageNum: '04',
-      tag: 'STAGE 04 • COMPLETED LUXURY RESIDENCE',
-      title: 'SPACES THAT INSPIRE',
-      desc: 'A completed timeless living sanctuary engineered with precision and tailored to perfection.',
+      badge: 'Your Vision • Our Expertise',
+      title: 'Your Vision. Our Expertise.',
+      accent: '',
+      desc: 'Let’s create a space you’ll love.',
+      btnText: 'GET A FREE CONSULTATION',
+      secondaryBtnText: 'EXPLORE OUR WORK'
     }
   ];
 
-  const currentContent = stagesContent[activeStage];
-
-  const scrollToStage = (stageIdx) => {
-    if (!sectionRef.current) return;
-    const targetProgress = stageIdx / (stagesContent.length - 1);
-    
-    const rect = sectionRef.current.getBoundingClientRect();
-    const sectionTop = window.scrollY + rect.top;
-    const totalScrollableHeight = rect.height - window.innerHeight;
-    const targetScrollY = sectionTop + targetProgress * totalScrollableHeight;
-
-    window.scrollTo({
-      top: targetScrollY,
-      behavior: 'smooth'
-    });
-  };
+  const currentContent = stagesContent[activeStage] || stagesContent[0];
 
   return (
     <section 
@@ -261,26 +245,31 @@ export default function Hero({ onExplore }) {
           <div key={activeStage} className="hero-content animated-content-swap">
             <div className="hero-tag-badge">
               <Sparkles size={14} className="gold-sparkle-icon" />
-              <span className="hero-tag-text">Premium Interior Design & Turnkey Solutions</span>
+              <span className="hero-tag-text">{currentContent.badge}</span>
             </div>
 
             <h1 className="hero-title">
-              Spaces That Inspire.<br />
-              <span className="hero-title-accent">Interiors That Belong to You.</span>
+              {currentContent.title}
+              {currentContent.accent && (
+                <>
+                  <br />
+                  <span className="hero-title-accent">{currentContent.accent}</span>
+                </>
+              )}
             </h1>
             
             <p className="hero-description">
-              We transform houses into thoughtfully designed homes where style, comfort and functionality come together. From concept to completion, Space Design creates interiors that reflect the way you live.
+              {currentContent.desc}
             </p>
 
             <div className="hero-cta-wrap">
               <button className="btn-gold-filled" onClick={onExplore}>
-                <span>GET STARTED</span>
+                <span>{currentContent.btnText}</span>
                 <ArrowRight size={16} />
               </button>
               
               <a href="#projects" className="btn-outline-glass">
-                <span>EXPLORE OUR WORK</span>
+                <span>{currentContent.secondaryBtnText}</span>
               </a>
             </div>
           </div>

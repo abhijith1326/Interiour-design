@@ -12,7 +12,7 @@ export default function Services({ onSelectService, onViewAllServices }) {
       tagline: 'Cook. Create. Connect.',
       desc: 'Functional, elegant kitchens designed around the way you cook, organise and live.',
       cta: 'Explore Kitchen Designs →',
-      img: '/images/service_custom.png'
+      img: '/images/kitchen.jpeg'
     },
     {
       num: '02',
@@ -20,7 +20,7 @@ export default function Services({ onSelectService, onViewAllServices }) {
       tagline: 'Make Every Moment More Beautiful.',
       desc: 'Welcoming living spaces that balance comfort, character and contemporary design.',
       cta: 'Explore Living Rooms →',
-      img: '/images/service_residential.png'
+      img: '/images/hall.jpeg'
     },
     {
       num: '03',
@@ -28,7 +28,7 @@ export default function Services({ onSelectService, onViewAllServices }) {
       tagline: 'Designed for Comfort.',
       desc: 'Calm, comfortable and personalised bedrooms designed to make every day feel better.',
       cta: 'Explore Bedrooms →',
-      img: '/images/service_decor.png'
+      img: '/images/bedroom.jpeg'
     },
     {
       num: '04',
@@ -36,7 +36,7 @@ export default function Services({ onSelectService, onViewAllServices }) {
       tagline: 'Storage That Works Beautifully.',
       desc: 'Beautifully integrated storage solutions that keep your home organised without compromising style.',
       cta: 'Explore Wardrobes →',
-      img: '/images/service_planning.png'
+      img: '/images/ward.jpeg'
     },
     {
       num: '05',
@@ -44,7 +44,7 @@ export default function Services({ onSelectService, onViewAllServices }) {
       tagline: 'A Better Space to Think and Create.',
       desc: 'Ergonomic, quiet work environments engineered for focus, creativity and remote productivity.',
       cta: 'Explore Home Offices →',
-      img: '/images/project_4.png'
+      img: '/images/hall_3.jpeg'
     },
     {
       num: '06',
@@ -52,7 +52,7 @@ export default function Services({ onSelectService, onViewAllServices }) {
       tagline: 'Spaces That Represent Your Brand.',
       desc: 'Professional environments designed to improve productivity, brand presence and customer experience.',
       cta: 'Explore Commercial →',
-      img: '/images/service_commercial.png'
+      img: '/images/dfvv.jpeg'
     }
   ];
 

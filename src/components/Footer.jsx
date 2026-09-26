@@ -23,10 +23,7 @@ export default function Footer({ onOpenQuote }) {
           {/* Column 1: Brand & Bio */}
           <div className="footer-col col-brand">
             <div className="footer-logo">
-              <div className="logo-text">
-                <span className="brand-name">Space Design</span>
-                <span className="brand-tagline">Spaces That Inspire.</span>
-              </div>
+              <img src="/logo.png" alt="Space Design Logo" className="footer-logo-img" />
             </div>
 
             <p className="footer-bio">
@@ -79,20 +76,45 @@ export default function Footer({ onOpenQuote }) {
           </div>
 
           {/* Column 4: Contact */}
-          <div className="footer-col">
-            <h4 className="footer-col-title">CONTACT</h4>
+          <div className="footer-col col-contact">
+            <h4 className="footer-col-title">CONTACT DETAILS</h4>
             <ul className="contact-info-list">
-              <li>
-                <Phone size={15} className="contact-icon" />
-                <a href="tel:+91XXXXXXXXXX">Phone: +91 XXXXX XXXXX</a>
+              <li className="contact-item">
+                <MapPin size={16} className="contact-icon" />
+                <div className="contact-address-block">
+                  <strong>Space Design</strong>
+                  <span>Nexus Building, First Floor</span>
+                  <span>Pallinada, Kazhakuttam</span>
+                  <span>Thiruvananthapuram - 695582</span>
+                  <a 
+                    href="https://maps.google.com/?q=Nexus+Building+Kazhakuttam+Thiruvananthapuram" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="contact-map-link"
+                  >
+                    View on Google Maps →
+                  </a>
+                </div>
               </li>
-              <li>
-                <Mail size={15} className="contact-icon" />
-                <a href="mailto:info@spacedesign.com">Email: info@spacedesign.com</a>
+              <li className="contact-item">
+                <Phone size={16} className="contact-icon" />
+                <div className="contact-phones">
+                  <div className="phone-line">
+                    <span className="phone-label">Primary:</span>
+                    <a href="tel:+918129822666" className="phone-link">+91 81298 22666</a>
+                  </div>
+                  <div className="phone-line">
+                    <span className="phone-label">Secondary:</span>
+                    <a href="tel:+918848286562" className="phone-link">+91 88482 86562</a>
+                  </div>
+                </div>
               </li>
-              <li>
-                <MapPin size={15} className="contact-icon" />
-                <span>Location: Trivandrum, Kerala</span>
+              <li className="contact-item">
+                <Mail size={16} className="contact-icon" />
+                <div className="contact-email-block">
+                  <span className="email-label">Email Us:</span>
+                  <a href="mailto:spacedesign2666@gmail.com" className="email-link">spacedesign2666@gmail.com</a>
+                </div>
               </li>
             </ul>
 

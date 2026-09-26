@@ -6,51 +6,51 @@ export default function Projects({ onOpenLightbox, onViewAllProjects }) {
   const projectsList = [
     {
       id: 1,
-      name: 'Modern Residence — Trivandrum',
-      type: 'Residential Interior',
+      name: 'Corporate Legal Hub — Trivandrum',
+      type: 'Commercial Interior',
       style: 'Contemporary',
-      category: 'RESIDENTIAL',
-      img: '/images/project_1.png'
+      category: 'COMMERCIAL',
+      img: '/images/project_1.jpeg'
     },
     {
       id: 2,
-      name: 'Bespoke Villa — Kochi',
+      name: 'Bespoke Luxury Villa — Kochi',
       type: 'Living Space',
       style: 'Modern Luxury',
       category: 'LIVING',
-      img: '/images/project_2.png'
+      img: '/images/project_2.jpeg'
     },
     {
       id: 3,
-      name: 'Sleek Island Kitchen — Calicut',
-      type: 'Modular Kitchen',
+      name: 'Contemporary TV Lounge — Calicut',
+      type: 'Media & Living Space',
       style: 'Contemporary Minimalist',
-      category: 'KITCHENS',
-      img: '/images/service_custom.png'
+      category: 'LIVING',
+      img: '/images/project_3.jpeg'
     },
     {
       id: 4,
-      name: 'Sanctuary Master Suite — Wayanad',
-      type: 'Bedroom Interior',
+      name: 'Boutique Reception Hub — Wayanad',
+      type: 'Commercial Reception',
       style: 'Warm Elegant',
-      category: 'BEDROOMS',
-      img: '/images/project_3.png'
+      category: 'COMMERCIAL',
+      img: '/images/project_4.jpeg'
     },
     {
       id: 5,
-      name: 'Corporate Design Hub — Trivandrum',
-      type: 'Commercial Environment',
+      name: 'Luxury Spa Wash Suite — Trivandrum',
+      type: 'Wellness Interior',
       style: 'Modern Architectural',
       category: 'COMMERCIAL',
-      img: '/images/service_commercial.png'
+      img: '/images/project_5.jpeg'
     },
     {
       id: 6,
-      name: 'Heritage Luxury Residence — Thrissur',
-      type: 'Complete Home Interior',
+      name: 'Elite Salon Studio — Thrissur',
+      type: 'Salon Interior',
       style: 'Timeless Contemporary',
-      category: 'RESIDENTIAL',
-      img: '/images/project_4.png'
+      category: 'COMMERCIAL',
+      img: '/images/project_6.jpeg'
     }
   ];
 
