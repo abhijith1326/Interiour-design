@@ -273,14 +273,14 @@
 }
 
 .badge-top-left {
-  top: -24px;
-  left: -28px;
+  top: 16px;
+  left: 16px;
   min-width: 165px;
 }
 
 .badge-bottom-right {
-  bottom: 30px;
-  right: -24px;
+  bottom: 24px;
+  right: 16px;
   min-width: 160px;
 }
 
@@ -329,8 +329,8 @@
 /* Circular Seal Badge Top Right */
 .circular-seal-badge {
   position: absolute;
-  top: -36px;
-  right: -28px;
+  top: -20px;
+  right: 16px;
   width: 115px;
   height: 115px;
   border-radius: 50%;

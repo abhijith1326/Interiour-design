@@ -456,12 +456,12 @@
 
   .btn-gold-filled, .btn-outline-glass, .btn-stage-jump {
     flex: 1 1 auto;
-    min-width: 130px;
+    min-width: 120px;
     padding: 10px 14px;
     font-size: 0.7rem;
     letter-spacing: 0.08em;
     justify-content: center;
-    white-space: nowrap;
+    text-align: center;
   }
 
   .btn-stage-jump {

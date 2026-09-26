@@ -145,6 +145,7 @@
   color: #ffffff;
   margin-bottom: 20px;
   line-height: 1.25;
+  word-break: break-word;
 }
 
 .project-btn-wrap {

@@ -95,7 +95,7 @@ export default function LightboxModal({ activeItem, items = [], onClose, onNavig
                 <span className="meta-label">Location</span>
                 <span className="meta-val">
                   <MapPin size={13} className="inline-gold-icon" />
-                  {activeItem.location || 'Trivandrum, Kerala'}
+                  {activeItem.location || 'Kerala'}
                 </span>
               </div>
 

@@ -6,7 +6,7 @@ export default function Projects({ onOpenLightbox, onViewAllProjects }) {
   const projectsList = [
     {
       id: 1,
-      name: 'Corporate Legal Hub — Trivandrum',
+      name: 'Corporate Legal Hub',
       type: 'Commercial Interior',
       style: 'Contemporary',
       category: 'COMMERCIAL',
@@ -14,7 +14,7 @@ export default function Projects({ onOpenLightbox, onViewAllProjects }) {
     },
     {
       id: 2,
-      name: 'Bespoke Luxury Villa — Kochi',
+      name: 'Bespoke Luxury Villa',
       type: 'Living Space',
       style: 'Modern Luxury',
       category: 'LIVING',
@@ -22,7 +22,7 @@ export default function Projects({ onOpenLightbox, onViewAllProjects }) {
     },
     {
       id: 3,
-      name: 'Contemporary TV Lounge — Calicut',
+      name: 'Contemporary TV Lounge',
       type: 'Media & Living Space',
       style: 'Contemporary Minimalist',
       category: 'LIVING',
@@ -30,7 +30,7 @@ export default function Projects({ onOpenLightbox, onViewAllProjects }) {
     },
     {
       id: 4,
-      name: 'Boutique Reception Hub — Wayanad',
+      name: 'Boutique Reception Hub',
       type: 'Commercial Reception',
       style: 'Warm Elegant',
       category: 'COMMERCIAL',
@@ -38,7 +38,7 @@ export default function Projects({ onOpenLightbox, onViewAllProjects }) {
     },
     {
       id: 5,
-      name: 'Luxury Spa Wash Suite — Trivandrum',
+      name: 'Luxury Spa Wash Suite',
       type: 'Wellness Interior',
       style: 'Modern Architectural',
       category: 'COMMERCIAL',
@@ -46,7 +46,7 @@ export default function Projects({ onOpenLightbox, onViewAllProjects }) {
     },
     {
       id: 6,
-      name: 'Elite Salon Studio — Thrissur',
+      name: 'Elite Salon Studio',
       type: 'Salon Interior',
       style: 'Timeless Contemporary',
       category: 'COMMERCIAL',
