@@ -13,7 +13,7 @@ export default function Blog({ onSelectArticle, onViewAllBlogs }) {
       title: 'How to Make Small Spaces Look Bigger',
       date: 'May 12, 2024',
       readTime: '5 min read',
-      img: '/images/project_1.png',
+      img: '/images/3.jpeg',
       excerpt: 'Discover expert architectural tricks and furniture placement techniques to maximize space and natural light in compact rooms.'
     },
     {
@@ -22,7 +22,7 @@ export default function Blog({ onSelectArticle, onViewAllBlogs }) {
       title: 'Top Interior Design Trends in 2024',
       date: 'May 05, 2024',
       readTime: '4 min read',
-      img: '/images/project_2.png',
+      img: '/images/2.jpeg',
       excerpt: 'Explore this year\'s defining aesthetics from warm organic curves and raw stone textures to rich ambient lighting palettes.'
     },
     {
@@ -31,7 +31,7 @@ export default function Blog({ onSelectArticle, onViewAllBlogs }) {
       title: 'Choosing the Right Colors for Your Home',
       date: 'Apr 28, 2024',
       readTime: '6 min read',
-      img: '/images/about_img.png',
+      img: '/images/3pic.jpeg',
       excerpt: 'Learn how color psychology creates harmony, warmth, and sophistication in your living and dining areas.'
     },
     {
@@ -40,7 +40,7 @@ export default function Blog({ onSelectArticle, onViewAllBlogs }) {
       title: 'Lighting Ideas to Elevate Your Interiors',
       date: 'Apr 20, 2024',
       readTime: '4 min read',
-      img: '/images/project_4.png',
+      img: '/images/4pict.jpeg',
       excerpt: 'Master layered lighting—combining architectural cove LED strips, statement chandeliers, and subtle accent fixtures.'
     }
   ];
